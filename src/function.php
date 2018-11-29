@@ -128,8 +128,7 @@ function task4()
 {
     $data = file_get_contents("https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&r
 vprop=content&format=json");
-    $decoded_data = json_decode($data , true);
-    $searchValue[] = $decoded_data['query']['pages']['15580374'];
+    $decoded_data = json_decode($data , true)
     foreach( $decoded_data['query']['pages'] as $page) {
         echo 'pageid - ' . $page['pageid'] . "</br>";
         echo 'title - ' . $page['title'] . "</br>";
